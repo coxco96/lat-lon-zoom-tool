@@ -2,8 +2,6 @@ import React from 'react';
 
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
-// import cemeteries from './us-cemeteries.js';
-
 mapboxgl.accessToken = 'pk.eyJ1IjoiY294Y285NiIsImEiOiJja3BrY2k0ZHgwa3Y0MnZwYTl3NWs4emJ5In0.ItwJEcRmF0LwO1DkHFgpZw';
 
 
@@ -82,6 +80,8 @@ export default class App extends React.PureComponent {
         return (
           <div>
             <div className="sidebar">
+                U.S. Cemeteries (one hexagon side = 20 miles)
+                <br />
               Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
             </div>
             <div ref={this.mapContainer} className="map-container" />
