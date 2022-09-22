@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/lat-lon-zoom-tool/precache-manifest.532dfbc44dbcf248b84eba36530cc8ce.js"
+  "/lat-lon-zoom-tool/precache-manifest.7a4269f289ef61288f5c7bdd14bc0c16.js"
 );
 
 workbox.clientsClaim();
