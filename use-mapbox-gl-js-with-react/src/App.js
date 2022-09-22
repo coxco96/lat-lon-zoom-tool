@@ -32,41 +32,6 @@ export default class App extends React.PureComponent {
 
 
 
-        map.on('load', () => {
-            // add cemetery data to map
-            map.addSource('cemeteries', {
-                'type': 'geojson',
-                'data': "https://raw.githubusercontent.com/coxco96/us-cemeteries-in-react/main/use-mapbox-gl-js-with-react/data/us-hexgrid.json"
-            });
-            map.addLayer({
-                'id': 'cemeteries-layer',
-                'type': 'fill',
-                'source': 'cemeteries',
-                'paint': {
-                    'fill-color': [
-                        "step",
-                        ["get", "count"],
-                        "#ede5cf",
-                        3,
-                        "#e0c2a2",
-                        10,
-                        "#d39c83",
-                        30,
-                        "#c1766f",
-                        60,
-                        "#a65461",
-                        100,
-                        "#813753",
-                        150,
-                        "#541f3f"
-                    ],
-                    'fill-opacity': .4,
-                },
-                'filter': ['!=', 'count', 0]
-            })
-        });
-
-
         map.on('move', () => {
             this.setState({
               lng: map.getCenter().lng.toFixed(4),
@@ -80,8 +45,6 @@ export default class App extends React.PureComponent {
         return (
           <div>
             <div className="sidebar">
-                U.S. Cemeteries (one hexagon side = 20 miles)
-                <br />
               Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
             </div>
             <div ref={this.mapContainer} className="map-container" />
