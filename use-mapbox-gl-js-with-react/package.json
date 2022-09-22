@@ -2,6 +2,7 @@
     "name": "use-mapbox-gl-js-with-react",
     "version": "0.1.0",
     "private": true,
+    "homepage" : "http://coxco96.github.io/us-cemeteries-in-react",
     "dependencies": {
         "mapbox-gl": "^2.10.0",
         "react": "^18.2.0",
