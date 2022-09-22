@@ -48,18 +48,26 @@ export default class App extends React.PureComponent {
                     'fill-color': [
                         "step",
                         ["get", "count"],
-                        "blue",
-                        5,
-                        "orange",
-                        25,
-                        "yellow",
-                        50,
-                        "brown"
+                        "#ede5cf",
+                        3,
+                        "#e0c2a2",
+                        10,
+                        "#d39c83",
+                        30,
+                        "#c1766f",
+                        60,
+                        "#a65461",
+                        100,
+                        "#813753",
+                        150,
+                        "#541f3f"
                     ],
-                    'fill-opacity': .2
-                }
+                    'fill-opacity': .4,
+                },
+                'filter': ['!=', 'count', 0]
             })
         });
+
 
         map.on('move', () => {
             this.setState({
