@@ -38,17 +38,25 @@ export default class App extends React.PureComponent {
             // add cemetery data to map
             map.addSource('cemeteries', {
                 'type': 'geojson',
-                'data': cemeteries
+                'data': "https://raw.githubusercontent.com/coxco96/us-cemeteries-in-react/main/use-mapbox-gl-js-with-react/data/us-hexgrid.json"
             });
             map.addLayer({
                 'id': 'cemeteries-layer',
-                'type': 'circle',
+                'type': 'fill',
                 'source': 'cemeteries',
                 'paint': {
-                    'circle-radius': 4,
-                    'circle-stroke-width': 2,
-                    'circle-color': 'gold',
-                    'circle-stroke-color': 'white'
+                    'fill-color': [
+                        "step",
+                        ["get", "count"],
+                        "blue",
+                        5,
+                        "orange",
+                        25,
+                        "yellow",
+                        50,
+                        "brown"
+                    ],
+                    'fill-opacity': .2
                 }
             })
         });
