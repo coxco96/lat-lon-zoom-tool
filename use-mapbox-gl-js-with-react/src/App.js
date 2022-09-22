@@ -2,7 +2,10 @@ import React from 'react';
 
 import mapboxgl from '!mapbox-gl'; // eslint-disable-line import/no-webpack-loader-syntax
 
+// import cemeteries from './us-cemeteries.js';
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiY294Y285NiIsImEiOiJja3BrY2k0ZHgwa3Y0MnZwYTl3NWs4emJ5In0.ItwJEcRmF0LwO1DkHFgpZw';
+
 
 
 export default class App extends React.PureComponent {
@@ -27,6 +30,27 @@ export default class App extends React.PureComponent {
             style: 'mapbox://styles/mapbox/dark-v10',
             center: [lng, lat],
             zoom: zoom
+        });
+
+
+
+        map.on('load', () => {
+            // add cemetery data to map
+            map.addSource('cemeteries', {
+                'type': 'geojson',
+                'data': cemeteries
+            });
+            map.addLayer({
+                'id': 'cemeteries-layer',
+                'type': 'circle',
+                'source': 'cemeteries',
+                'paint': {
+                    'circle-radius': 4,
+                    'circle-stroke-width': 2,
+                    'circle-color': 'gold',
+                    'circle-stroke-color': 'white'
+                }
+            })
         });
 
         map.on('move', () => {
