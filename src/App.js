@@ -43,10 +43,18 @@ export default class App extends React.PureComponent {
     render() {
         const { lng, lat, zoom } = this.state;
         return (
+          
+          
           <div>
+
+            <div className="author">
+            <strong>Created by: <a href="https://coxco96.github.io">Court Cox</a></strong>
+            </div>
+
             <div className="sidebar">
               Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
             </div>
+
             <div ref={this.mapContainer} className="map-container" />
           </div>
         );
