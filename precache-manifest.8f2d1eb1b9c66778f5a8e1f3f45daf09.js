@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "07f40cfe21103ad7b2c9",
-    "url": "/lat-lon-zoom-tool/static/css/main.92bac75f.chunk.css"
+    "revision": "8a93844d955fef74b27f",
+    "url": "/lat-lon-zoom-tool/static/css/main.0b24baaa.chunk.css"
   },
   {
-    "revision": "07f40cfe21103ad7b2c9",
-    "url": "/lat-lon-zoom-tool/static/js/main.07f40cfe.chunk.js"
+    "revision": "8a93844d955fef74b27f",
+    "url": "/lat-lon-zoom-tool/static/js/main.8a93844d.chunk.js"
   },
   {
     "revision": "c2ee033b5fba4ec7a099",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/lat-lon-zoom-tool/static/js/runtime~main.a44e49b3.js"
   },
   {
-    "revision": "c39e062c2384a063d76c2b3b2ae814e1",
+    "revision": "be133cb523bfc461379aa2be3ee8cc63",
     "url": "/lat-lon-zoom-tool/index.html"
   }
 ];
